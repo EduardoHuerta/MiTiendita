@@ -7,7 +7,7 @@ public class Product {
   public Product() {}
 
   private String Description;
-  private int quantity;
+  private Double quantity;
   private Double price;
   private ProductCategory productCategory;
 
@@ -19,11 +19,11 @@ public class Product {
     Description = description;
   }
 
-  public int getQuantity() {
+  public Double getQuantity() {
     return quantity;
   }
 
-  public void setQuantity(int quantity) {
+  public void setQuantity(Double quantity) {
     this.quantity = quantity;
   }
 

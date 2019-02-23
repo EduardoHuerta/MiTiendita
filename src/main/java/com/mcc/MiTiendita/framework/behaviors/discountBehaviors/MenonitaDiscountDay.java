@@ -5,18 +5,18 @@ import com.mcc.MiTiendita.app.domain.entities.Product;
 
 import java.util.List;
 
-public class FruitDayDiscount implements DiscountDayBehavior {
+public class MenonitaDiscountDay implements DiscountDayBehavior {
 
-  //15 percent
-  private final Double FRUIT_DISCOUNT = 0.85;
+  // 10 percent
+  private final Double MENONITA_DISCOUNT = 0.90;
 
   @Override
   public Double applyDiscount(List<Product> products) {
     Double total = 0.0;
     if (products != null && !products.isEmpty()) {
       for (Product item : products) {
-        if (ProductCategory.FRUIT.equals(item.getProductCategory())) {
-          total += (item.getPrice() * item.getQuantity()) * FRUIT_DISCOUNT;
+        if (ProductCategory.DAIRY.equals(item.getProductCategory())) {
+          total += (item.getPrice() * item.getQuantity()) * MENONITA_DISCOUNT;
         } else {
           total += item.getPrice() * item.getQuantity();
         }
