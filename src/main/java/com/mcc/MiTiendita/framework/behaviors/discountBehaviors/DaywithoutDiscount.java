@@ -7,6 +7,12 @@ import java.util.List;
 public class DaywithoutDiscount implements DiscountDayBehavior {
   @Override
   public Double applyDiscount(List<Product> products) {
-    return null;
+    Double total = 0.0;
+    if (products != null && !products.isEmpty()) {
+      for (Product item : products) {
+        total += item.getPrice() * item.getQuantity();
+      }
+    }
+    return total;
   }
 }

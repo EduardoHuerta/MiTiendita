@@ -9,7 +9,6 @@ public class Product {
   private String Description;
   private int quantity;
   private Double price;
-  private Double unitOfMeasurement;
   private ProductCategory productCategory;
 
   public String getDescription() {
@@ -34,14 +33,6 @@ public class Product {
 
   public void setPrice(Double price) {
     this.price = price;
-  }
-
-  public Double getUnitOfMeasurement() {
-    return unitOfMeasurement;
-  }
-
-  public void setUnitOfMeasurement(Double unitOfMeasurement) {
-    this.unitOfMeasurement = unitOfMeasurement;
   }
 
   public ProductCategory getProductCategory() {
